@@ -1,0 +1,78 @@
+@charset "utf-8";
+
+* {
+  /**
+   * 简单粗暴, 一劳永逸的写法
+   */
+  padding: 0;
+  margin: 0;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+* {
+  /*
+   * 这个属性只用于iOS, 当你点击一个链接或者通过Javascript定义的可点击元素的时候
+   * 它就会出现一个半透明的灰色背景
+  */
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+html {
+  -webkit-text-size-adjust: 100%; /* 禁止字体变化 */
+}
+
+body {
+  font-size: 16px;
+  font-weight: 400;
+  font-family: Helvetica, Arial, sans-serif;
+  line-height: 1;
+  -webkit-overflow-scrolling: touch; /* 设置滚动容器的滚动效果 */
+  -webkit-font-smoothing: antialiased; /* 字体抗锯齿渲染 */
+}
+
+a,
+a:active,
+a:hover {
+  /**
+   * 某些浏览器会给 a 设置默认颜色
+   */
+  color: unset;
+  text-decoration: none;
+}
+
+ol,
+ul,
+li {
+  /**
+   * 去掉列表样式
+   */
+  list-style: none;
+}
+
+img {
+  border: 0;
+  vertical-align: middle;
+}
+
+table {
+  /**
+   * 去掉 td 与 td 之间的空隙
+   */
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+input,
+textarea,
+select {
+  outline: none; /*去掉fouce时边框高亮效果*/
+  background: unset; /*去掉默认背景*/
+  appearance: none;
+  -webkit-appearance: none; /* 去除ios输入框阴影 */
+}
+
+/* 禁止选中文本内容 */
+*:not(input, select, textarea) {
+  -webkit-user-select: none;
+}
