@@ -8,7 +8,7 @@ export default function({ route }) {
 
   console.info("【INFO】：checkDate 执行中...", route.path);
   return new Promise(async reslove => {
-    await sleep(2000);
+    await sleep(200);
     reslove();
   });
 }

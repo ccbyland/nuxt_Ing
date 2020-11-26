@@ -1,7 +1,10 @@
 <template>
   <ul class="index-contents">
     <li v-for="(item, idx) in list" :key="idx">
-      <NuxtLink :to="{ path: item.path }">{{ item.label }}</NuxtLink>
+      <NuxtLink
+        v-item-active="{ text: item.label, index: idx }"
+        :to="{ path: item.path }"
+      ></NuxtLink>
     </li>
   </ul>
 </template>
@@ -20,7 +23,7 @@ export default {
   padding: 10px;
   li {
     height: 120px;
-    font-size: 60px;
+    font-size: 45px;
     border-radius: 10px;
     margin-bottom: 10px;
     display: flex;
@@ -51,6 +54,9 @@ export default {
     }
     &:nth-child(8) {
       background: rgb(30, 41, 61);
+    }
+    a.active {
+      font-size: 55px;
     }
   }
 }

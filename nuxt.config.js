@@ -25,7 +25,8 @@ export default {
    */
   plugins: [
     { src: "~/plugins/axios.js"},// 前后端发起的请求都经过这里
-    { src: "~/plugins/lazy-load.js", mode: "client" },
+    { src: "~/plugins/vue-lazyload.js", mode: "client" },
+    { src: "~/plugins/vue-directive.js"},
   ],
 
   components: true,
