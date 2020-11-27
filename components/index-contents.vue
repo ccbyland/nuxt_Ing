@@ -32,28 +32,36 @@ export default {
     color: #fff;
     font-weight: bold;
     &:nth-child(1) {
-      background: rgb(130, 57, 53);
+      background: url('../assets/img/bg/1.jpeg') no-repeat center center;
+      background-size: cover;
     }
     &:nth-child(2) {
-      background: rgb(137, 190, 178);
+      background: url('../assets/img/bg/2.jpeg') no-repeat center center;
+      background-size: cover;
     }
     &:nth-child(3) {
-      background: rgb(201, 186, 131);
+      background: url('../assets/img/bg/3.jpeg') no-repeat center center;
+      background-size: cover;
     }
     &:nth-child(4) {
-      background: rgb(222, 211, 140);
+      background: url('../assets/img/bg/4.jpeg') no-repeat center center;
+      background-size: cover;
     }
     &:nth-child(5) {
-      background: rgb(222, 156, 83);
+      background: url('../assets/img/bg/5.jpeg') no-repeat center center;
+      background-size: cover;
     }
     &:nth-child(6) {
-      background: rgb(69, 137, 148);
+      background: url('../assets/img/bg/6.jpeg') no-repeat center center;
+      background-size: cover;
     }
     &:nth-child(7) {
-      background: rgb(224, 160, 158);
+      background: url('../assets/img/bg/7.jpeg') no-repeat center center;
+      background-size: cover;
     }
     &:nth-child(8) {
-      background: rgb(30, 41, 61);
+      background: url('../assets/img/bg/8.jpeg') no-repeat center center;
+      background-size: cover;
     }
     a.active {
       font-size: 55px;

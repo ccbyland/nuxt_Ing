@@ -17,21 +17,25 @@ export default Vue.extend({
   },
   methods: {
     async login() {
-      if (this.checkForm()) {
+      if (this.checkForm() && !this.lock) {
+        this.lock = true;
+        this.$toast.show("正在登陆，请稍等...");
         const __token__ = await this.$axios.$post("/api/userLogin", {
           username: this.username
         });
         if (__token__) {
+          this.$toast.success("登陆成功");
           this.$cookies.set("__token__", __token__);
           this.$router.push({ path: "./" });
         } else {
-          alert("登陆失败");
+          this.$toast.error("登陆失败");
+          this.lock = false;
         }
       }
     },
     checkForm() {
       if (!this.username) {
-        alert("用户名不能为空");
+        this.$toast.error("用户名不能为空");
         return false;
       }
       return true;

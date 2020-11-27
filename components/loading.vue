@@ -31,6 +31,7 @@ export default {
   display: flex;
   justify-content: center;
   align-items: center;
+  z-index: 1000;
   .icon {
     width: 40px;
     height: 40px;
