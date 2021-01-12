@@ -1,3 +1,7 @@
+import getZipByDist from './webpack/plugins/getZipByDist';
+import uploadDist from './webpack/plugins/uploadDist';
+
+
 const serverAddress = "http://localhost:3003";
 export default {
   /**
@@ -76,6 +80,12 @@ export default {
           name: "img/[name].[hash].[ext]"
         }
       }
+    ],
+    plugins: [
+      // 静态资源打包成zip
+      new getZipByDist(),
+      // 上传到静态服务器
+      new uploadDist(),
     ]
   },
   server: {
